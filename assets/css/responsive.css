@@ -1,0 +1,205 @@
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 980px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+  .writing-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .archive-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 32px 0;
+  }
+  .archive-tags {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Tablet
+   ============================================ */
+
+@media (max-width: 760px) {
+  body { cursor: auto; }
+  .hero { padding: 120px 6vw 60px; }
+  .section { padding: 100px 6vw; }
+  .foot { padding: 32px 6vw; }
+  .name { font-size: clamp(56px, 14vw, 96px); }
+  .nav-link { padding: 9px 14px; font-size: 12px; }
+  .cta-row { flex-wrap: wrap; }
+  .meta-line { flex-wrap: wrap; gap: 10px; }
+  .research-card { padding: 32px 28px; min-height: auto; }
+  .contact-card { padding: 22px 24px; }
+  .section-title { font-size: clamp(34px, 9vw, 52px); }
+  .section-head { margin-bottom: 56px; }
+  .coming-soon { padding: 56px 32px; }
+  .contact-grid-pair { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   Android phones
+   ============================================ */
+
+@media (max-width: 520px) {
+
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: 110px 6vw 90px;
+  }
+  .kicker { margin-bottom: 32px; font-size: 10px; }
+  .name { font-size: clamp(48px, 17vw, 88px); margin-bottom: 24px; letter-spacing: -0.04em; }
+  .name .line-2 { gap: 0.02em; }
+  .headline { font-size: 12px; margin-bottom: 22px; }
+  .research-statement {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+  .cta-row { margin-bottom: 56px; }
+  .btn { padding: 12px 18px; font-size: 13px; }
+  .meta-line {
+    font-size: 11px;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .meta-sep { display: none; }
+  .scroll-hint { display: none; }
+
+  .nav-wrap { top: 14px; left: 12px; right: 12px; transform: none; max-width: 100%; }
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 2px;
+  }
+  .nav-link {
+    padding: 9px 10px;
+    font-size: 11.5px;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .section { padding: 80px 6vw; }
+  .section-head { margin-bottom: 48px; }
+  .section-title { font-size: clamp(32px, 11vw, 48px); letter-spacing: -0.035em; }
+  .section-lede { font-size: 15px; line-height: 1.55; }
+  .section-eyebrow { font-size: 10px; margin-bottom: 18px; }
+
+  .research-card { padding: 26px 22px; min-height: auto; }
+  .research-top { margin-bottom: 36px; }
+  .research-title { font-size: 19px; line-height: 1.3; }
+  .research-abstract { font-size: 13.5px; padding-bottom: 24px; }
+  .research-meta { flex-wrap: wrap; gap: 6px; font-size: 10px; }
+
+  .archive-row { padding: 28px 0; gap: 8px; }
+  .archive-year { font-size: 11px; }
+  .archive-title { font-size: 22px; margin-bottom: 8px; }
+  .archive-desc { font-size: 14px; }
+  .archive-tags { gap: 5px; }
+  .archive-tags li { font-size: 10px; padding: 4px 8px; }
+
+  .writing-card { padding: 28px 0; }
+  .writing-date { margin-bottom: 20px; }
+  .writing-title { font-size: 19px; }
+  .writing-excerpt { font-size: 13.5px; }
+
+  .contact-section { padding-bottom: 140px; }
+  .contact-grid { gap: 10px; margin-bottom: 64px; }
+  .contact-card { padding: 20px 22px; gap: 4px 12px; }
+  .contact-label { font-size: 10px; letter-spacing: 0.14em; }
+  .contact-value { font-size: 14px; }
+  .contact-arrow { font-size: 16px; }
+  .signature { font-size: 13px; margin-top: 56px; }
+
+  .coming-soon { padding: 56px 28px; min-height: 240px; }
+  .coming-soon-mark { width: 180px; height: 180px; }
+
+  .foot-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 10px;
+  }
+}
+
+/* ============================================
+   Landscape phones (Android)
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: 90px 6vw 60px;
+  }
+  .name { font-size: clamp(40px, 8vw, 64px); margin-bottom: 16px; }
+  .research-statement { font-size: 15px; margin-bottom: 24px; max-width: 70ch; }
+  .cta-row { margin-bottom: 32px; }
+  .scroll-hint { display: none; }
+  .section { padding: 70px 6vw; }
+  .section-head { margin-bottom: 40px; }
+}
+
+/* ============================================
+   Foldables / large android
+   ============================================ */
+
+@media (min-width: 521px) and (max-width: 760px) {
+  .name { font-size: clamp(64px, 13vw, 92px); }
+  .research-statement { font-size: 17px; }
+  .nav-link { padding: 9px 13px; font-size: 12px; }
+}
+
+/* ============================================
+   Ultra-wide / desktop
+   ============================================ */
+
+@media (min-width: 1600px) {
+  .hero-inner, .section { max-width: 1320px; }
+  .name { font-size: clamp(110px, 9vw, 160px); }
+  .section-title { font-size: clamp(56px, 4.5vw, 76px); }
+}
+
+/* ============================================
+   Touch optimizations
+   ============================================ */
+
+@media (hover: none) {
+  .archive-row:hover { padding-left: 0; }
+  .archive-row::before { display: none; }
+  .research-card:hover { background: var(--bg); }
+  .research-card:hover::after { opacity: 0; }
+  .contact-card:hover { background: rgba(255, 255, 255, 0.015); border-color: var(--line); }
+  .contact-card:hover::before { opacity: 0; }
+  .writing-card:hover::before { width: 0; }
+  .btn { -webkit-tap-highlight-color: transparent; }
+  .btn:active { transform: scale(0.98); }
+  .nav-link:active { background: rgba(255, 255, 255, 0.06); }
+  .archive-row:active { background: rgba(255, 255, 255, 0.02); }
+  .contact-card:active { background: rgba(255, 255, 255, 0.03); }
+}
+
+/* ============================================
+   Reduced motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

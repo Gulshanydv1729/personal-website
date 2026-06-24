@@ -1,0 +1,49 @@
+/* ============================================
+   Floating nav
+   ============================================ */
+
+.nav-wrap {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: auto;
+}
+
+.glass {
+  background: rgba(15, 15, 17, 0.55);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 999px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link {
+  position: relative;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 450;
+  color: var(--ink-mute);
+  letter-spacing: -0.01em;
+  border-radius: 999px;
+  transition: color 0.3s var(--duration), background 0.3s var(--duration);
+}
+
+.nav-link:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link.active {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+}

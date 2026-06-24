@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Cypher 2 — Gulshan Yadav</title>
+  <meta name="description" content="A two-way Caesar cipher laboratory — type in either field and watch the alphabet rotate in real time." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/nav.css" />
+  <link rel="stylesheet" href="../../assets/css/contact.css" />
+  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="cypher2.css" />
+</head>
+<body class="cypher-body">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="cypher-nav">
+    <a href="../../index.html" class="cypher-back">
+      <span class="cypher-back-arrow" aria-hidden="true">←</span>
+      <span>Gulshan Yadav</span>
+    </a>
+    <span class="cypher-nav-meta">Project · 2026</span>
+  </header>
+
+  <main class="cypher-main">
+    <section class="cypher-hero">
+      <p class="cypher-eyebrow">02 — Project</p>
+      <h1 class="cypher-title">Cypher&nbsp;2</h1>
+      <p class="cypher-lede">
+        A small laboratory for the oldest cipher we know. Type in either
+        field — the alphabet rotates, the other field follows, and the
+        distance between letters stays exactly where you put it.
+      </p>
+    </section>
+
+    <section class="cypher-lab">
+      <div class="cypher-grid">
+        <div class="cypher-panel">
+          <div class="cypher-panel-head">
+            <span class="cypher-label">Plaintext</span>
+            <span class="cypher-badge">Encrypts &rarr;</span>
+          </div>
+          <textarea id="plainText" class="cypher-area" placeholder="Begin here…" spellcheck="false" autocomplete="off"></textarea>
+          <div class="cypher-foot">
+            <span data-stat="plain-len">0 characters</span>
+          </div>
+        </div>
+
+        <div class="cypher-controls">
+          <div class="cypher-shift">
+            <span class="cypher-label">Shift Key</span>
+            <div class="cypher-shift-row">
+              <button class="cypher-step" data-step="-1" aria-label="Decrease shift">−</button>
+              <input id="shiftAmount" type="number" value="3" min="0" max="25" />
+              <button class="cypher-step" data-step="1" aria-label="Increase shift">+</button>
+            </div>
+            <input id="shiftSlider" class="cypher-slider" type="range" min="0" max="25" value="3" />
+            <div class="cypher-alphabet" id="alphabet" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="cypher-panel">
+          <div class="cypher-panel-head">
+            <span class="cypher-label">Ciphertext</span>
+            <span class="cypher-badge">&larr; Decrypts</span>
+          </div>
+          <textarea id="cipherText" class="cypher-area" placeholder="…or paste a code here" spellcheck="false" autocomplete="off"></textarea>
+          <div class="cypher-foot">
+            <span data-stat="cipher-len">0 characters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cypher-meta-line">
+        <span>Caesar Substitution</span>
+        <span class="cypher-dot"></span>
+        <span>A → A + k (mod 26)</span>
+        <span class="cypher-dot"></span>
+        <span id="shiftReadout">k = 3</span>
+      </div>
+    </section>
+
+    <section class="cypher-notes">
+      <h2 class="cypher-notes-title">Notes</h2>
+      <ul>
+        <li>The cipher operates on the Latin alphabet only; digits, punctuation, and whitespace pass through unchanged.</li>
+        <li>Decryption is simply encryption with the key negated — the same machinery, run in reverse.</li>
+        <li>For any key <em>k</em> not coprime with 26, the cipher is its own inverse under a 26-period.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="foot-mark">© 2026</span>
+      <a href="../../index.html" class="foot-text">← Back to notes</a>
+      <span class="foot-text muted">Cypher 2 · v1.0</span>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/cursor.js"></script>
+  <script src="cypher2.js"></script>
+</body>
+</html>
